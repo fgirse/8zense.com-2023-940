@@ -11,6 +11,13 @@
   "dependencies": {
     "@clerk/nextjs": "^4.29.3",
     "@clerk/themes": "^2.1.10",
+    "@formkit/auto-animate": "^0.8.2",
+    "@heroicons/react": "^2.1.1",
+    "@hookform/error-message": "^2.0.1",
+    "@hookform/resolvers": "^3.3.2",
+    "@lottiefiles/lottie-player": "^2.0.4",
+    "@lottiefiles/react-lottie-player": "^3.5.3",
+    "@radix-ui/react-alert-dialog": "^1.0.5",
     "add": "^2.0.6",
     "antd": "^5.16.2",
     "axios": "^1.6.8",
@@ -30,13 +37,6 @@
     "input": "^1.0.1",
     "lottie-react": "^2.4.0",
     "lucide-react": "^0.294.0",
-    "@formkit/auto-animate": "^0.8.2",
-    "@heroicons/react": "^2.1.1",
-    "@hookform/error-message": "^2.0.1",
-    "@hookform/resolvers": "^3.3.2",
-    "@lottiefiles/lottie-player": "^2.0.4",
-    "@lottiefiles/react-lottie-player": "^3.5.3",
-    "@radix-ui/react-alert-dialog": "^1.0.5",
     "marked": "^11.2.0",
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.3",
@@ -62,7 +62,8 @@
     "react-lite-youtube-embed": "^2.4.0",
     "react-svg": "^16.1.33",
     "react-typed": "^2.0.12",
-    "recharts": "^2.12.0"
+    "recharts": "^2.12.0",
+    "resend": "^3.4.0"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",

@@ -7,6 +7,22 @@
     "description": "Dies ist ein Beispiel, das die Verwendung von <code>next-intl</code> mit dem Next.js App Router demonstriert. Bei Ändern der Sprache rechts oben ändert sich der Inhalt dieser Seite.",
     "title": "next-intl Beispiel"
   },
+
+"Hero":{
+  "PräTitle": "innenarchitektur",
+  "Title":"8zense.com",
+  "Posttitle":"Zeitloses Desing aus dem Werkstoff Beton"
+},
+
+"Intro":{
+  "Reference_Carl_Sagan": "innenarchitektur",
+  "Title":"Desing Interiore",
+  "Posttitle":"Zeitloses Desing aus dem Werkstoff Beton",
+  "Title02":"Desing Interiore",
+  "Posttitle02":"Zeitloses Desing aus dem Werkstoff Beton"
+  
+},
+
   "LocaleLayout": {
     "title": "next-intl Beispiel"
   },

@@ -10,6 +10,22 @@
     "LocaleLayout": {
       "title": "next-intl example"
     },
+"Hero":{
+  "PräTitle": "innenarchitektur",
+  "Title":"8zense.com",
+  "Posttitle":"Zeitloses Desing aus dem Werkstoff Beton"
+},
+
+"Intro":{
+  "Reference_Carl_Sagan": "innenarchitektur",
+  "Title":"Desing Interiore",
+  "Posttitle":"Zeitloses Desing aus dem Werkstoff Beton",
+  "Title02":"Desing Interiore",
+  "Posttitle02":"Zeitloses Desing aus dem Werkstoff Beton"
+  
+},
+
+
     "LocaleSwitcher": {
         "label": "Change language",
         "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} fr { 🇫🇷 French} es { 🇪🇸 Espangnol} it { 🇮🇹 Italia} pt { 🇵🇹 Portuquese} other {Unknown}}"

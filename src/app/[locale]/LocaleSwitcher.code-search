@@ -1,0 +1,106 @@
+# Query: LocaleSwitcher
+# ContextLines: 1
+
+28 Ergebnisse - 14-Dateien
+
+messages/de.json:
+  12    },
+  13:   "LocaleSwitcher": {
+  14      "label": "Sprache ändern",
+
+messages/en.json:
+  12    },
+  13:   "LocaleSwitcher": {
+  14      "label": "Change language",
+
+messages/es.json:
+  12      },
+  13:     "LocaleSwitcher": {
+  14          "label": "Sprache ändern",
+
+messages/fr.json:
+  12      },
+  13:     "LocaleSwitcher": {
+  14          "label": "Change language",
+
+messages/it.json:
+  12      },
+  13:    "LocaleSwitcher": {
+  14          "label": "Change language",
+
+messages/pt.json:
+  12      },
+  13:     "LocaleSwitcher": {
+  14          "label": "Change language",
+
+src/app/componentAlias/LocaleSwitcher.tsx:
+   1  import {useLocale, useTranslations} from 'next-intl';
+   2: import LocaleSwitcherSelect from './LocaleSwitcherSelect';
+   3  import {locales} from '@/src/config';
+   4  
+   5: export default function LocaleSwitcher() {
+   6:   const t = useTranslations('LocaleSwitcher');
+   7    const locale = useLocale();
+
+   9    return (
+  10:     <LocaleSwitcherSelect defaultValue={locale} label={t('label')}>
+  11        {locales.map((cur) => (
+
+  15        ))}
+  16:     </LocaleSwitcherSelect>
+  17    );
+
+src/app/componentAlias/LocaleSwitcherSelect.tsx:
+  13  
+  14: export default function LocaleSwitcherSelect({
+  15    children,
+
+src/app/componentAlias/Navigation.spec.tsx:
+  25        locale="en"
+  26:       messages={pick(messages, ['Navigation', 'LocaleSwitcher'])}
+  27      >
+
+src/app/componentAlias/Navigation.tsx:
+   1  import {useTranslations} from 'next-intl';
+   2: import LocaleSwitcher from './LocaleSwitcher';
+   3  import NavigationLink from './NavigationLink';
+
+  14          </div>
+  15:         <LocaleSwitcher />
+  16        </nav>
+
+src/components/LocaleSwitcher.tsx:
+   1  import {useLocale, useTranslations} from 'next-intl';
+   2: import LocaleSwitcherSelect from './LocaleSwitcherSelect';
+   3  import {locales} from '@/src/config';
+   4  
+   5: export default function LocaleSwitcher() {
+   6:   const t = useTranslations('LocaleSwitcher');
+   7    const locale = useLocale();
+
+   9    return (
+  10:     <LocaleSwitcherSelect defaultValue={locale} label={t('label')}>
+  11        {locales.map((cur) => (
+
+  15        ))}
+  16:     </LocaleSwitcherSelect>
+  17    );
+
+src/components/LocaleSwitcherSelect.tsx:
+  13  
+  14: export default function LocaleSwitcherSelect({
+  15    children,
+
+src/components/Navigation.spec.tsx:
+  25        locale="en"
+  26:       messages={pick(messages, ['Navigation', 'LocaleSwitcher'])}
+  27      >
+
+src/components/Navigation.tsx:
+   1  import {useTranslations} from 'next-intl';
+   2: import LocaleSwitcher from './LocaleSwitcher';
+   3  import NavigationLink from './NavigationLink';
+
+  18          </div>
+  19:         <LocaleSwitcher />
+  20        </nav>

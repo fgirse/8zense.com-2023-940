@@ -1,26 +1,8 @@
-import {useTranslations} from 'next-intl';
-import {unstable_setRequestLocale} from 'next-intl/server';
-import PageLayout from '@/src/components/PageLayout';
+import {getServerSession} from 'next-auth';
+import auth from '../../auth';
+import Index from './Index';
 
-type Props = {
-  params: {locale: string};
-};
-
-export default function IndexPage({params: {locale}}: Props) {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
-
-  const t = useTranslations('IndexPage');
-
-  return (
-    <PageLayout title={t('title')}>
-      <p className="max-w-[590px]">
-        {t.rich('description', {
-          code: (chunks) => (
-            <code className="font-mono text-white">{chunks}</code>
-          )
-        })}
-      </p>
-    </PageLayout>
-  );
+export default async function IndexPage() {
+  const session = await getServerSession(auth);
+  return <Index session={session} />;
 }

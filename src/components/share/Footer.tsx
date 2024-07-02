@@ -1,8 +1,7 @@
 import Link from "next/link"
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Logo02 from"@/public/assets/images/LogoEZ990.svg";
-import { Button } from "@/src/components/ui/button";
-import { Input } from "@/src/components/ui/input";
+import { Button } from "@/src/components/ui/button"
 ;import Image from "next/image";
 import ScrollToTop from "../BackToTop/ScrollToTop";
 
@@ -29,10 +28,7 @@ export default function FooterDemo() {
           </Link>
           
 
-          <div className="flex mt-4">
-            <Input type="email" placeholder="Email" />
-            <Button className="bg-zenseSignal2" variant="default">sende e-mail</Button>
-          </div>
+          
           <div className="flex justify-center mt-4 space-x-4 lg:mt-2">
             <Link href={""}>
               <Facebook className="text-blue-500" />

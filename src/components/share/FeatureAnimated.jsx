@@ -1,17 +1,11 @@
-'use client'
-import { useState, useEffect, useCallback } from 'react';
-import { motion } from 'framer-motion';
-import { Player } from '@lottiefiles/react-lottie-player';
+import React, { useState, useEffect } from "react";
 
-interface Step {
-  id: number;
-  text: string;
-  animation: string;
-}
- const HowItWorks: React.FC = () => {
+
+const HowItWorks = () => {
+
   const [step, setStep] = useState<number>(0);
 
-  const steps: Step[] = [
+  const steps = [
     {
       id: 1,
       text: "Erstellen Sie einen Account auf unserer Website  von 8zense.com!",
@@ -37,20 +31,16 @@ interface Step {
       text: "In allen Phasen des Projektes wird in einem Analyze-Evaluate-Synthesyze-Circuit kontenuierlich fortentwickelt, bis Ihre Ziele und Vorgaben erreicht sind!",
       animation: "https://lottie.host/d969d744-bf03-4aa4-90ac-50f9c5dda9b5/P36NGczhaX.json",
     },
-
     {
       id: 6,
       text: "Ist Ihr Design-Projekt dann umgesetzt, erfolgt der Startpfiff zur Abnahme des Projektes durch Fernanda mit allen Beteiligten gemeinsam bis alle Korrekturen und Beanstandungen aus dem Weg geräumt sind.",
       animation: "https://lottie.host/59703381-ed25-463c-913f-7cd163db2aa7/uF1vDxwgIZ.json",
     },
-    
   ];
 
-
-
-  const handleStepChange = useCallback(() => {
+  const handleStepChange = () => {
     setStep((prevStep) => (prevStep + 1) % steps.length);
-  }, [steps.length]);
+  };
 
   useEffect(() => {
     const interval = setInterval(handleStepChange, 7000);
@@ -60,15 +50,13 @@ interface Step {
   return (
     <motion.div
       className=" flex flex-col sm:min-h-screen h-full"
-      key={steps[step].id} // Add a unique key to trigger motion animation on step change
+      key={steps[step].id}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0.5 }}
-      transition={{
-        duration: 1, // Adjust the duration as desired
-      }}
+      transition={{ duration: 1 }}
     >
-      <div className='h-[100%] ss:p-10 p-5 flex flex-col items-center justify-center '>
+      <div className="h-[100%] ss:p-10 p-5 flex flex-col items-center justify-center ">
         <div className="grid grid0-cols-2 gap-4">
           <p className="text-sm md:text-base text-slate-800 font-light mt-2 leading-relaxed text-center">
             HOW IT WORKS
@@ -80,10 +68,10 @@ interface Step {
             autoplay
             loop
             src={steps[step].animation}
-            style={{ height: '40vh', width: '100%' }}
+            style={{ height: "40vh", width: "100%" }}
           />
         </div>
-        <p className= "h-24 w-96 relative  bg-[url('/assets/images/brushOrange.svg')] bg-cover text-xl  text-slate-900 font-light mb-4 text-center">
+        <p className="h-24 w-96 relative bg-[url('/assets/images/brushOrange.svg')] bg-cover text-xl text-slate-900 font-light mb-4 text-center">
           {steps[step].text}
         </p>
       </div>

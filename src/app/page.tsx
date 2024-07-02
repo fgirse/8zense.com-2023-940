@@ -1,10 +1,9 @@
-import Image from "next/image";
+import React from 'react'
 
-export default function Home() {
+const page = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
-      
-    </main>
-  );
+    <div className='bg-red-300 h-screen w-5/6'>page</div>
+  )
 }
+
+export default page

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { ClerkProvider } from '@clerk/nextjs';
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import MenuBar from"@/src/components/Navigation";
 
 const LoggedIn = () => {
   return (
-    <section>
+    <ClerkProvider>
  <SignedIn>
 
 <nav className="lg:flex lg:flex-row lg:items-baseline lg:max-w-6xl">
@@ -32,7 +32,7 @@ const LoggedIn = () => {
 
 
 
-    </section>
+    </ClerkProvider>
   )
 }
 

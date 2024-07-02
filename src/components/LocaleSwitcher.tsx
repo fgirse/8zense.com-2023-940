@@ -1,18 +1,15 @@
 import {useLocale, useTranslations} from 'next-intl';
-import LocaleSwitcherSelect from './LocaleSwitcherSelect';
-import {locales} from '@/src/config'
+import {Link, usePathname} from '../navigation';
 
 export default function LocaleSwitcher() {
   const t = useTranslations('LocaleSwitcher');
   const locale = useLocale();
+  const otherLocale = locale === 'en' ? 'de' : 'en';
+  const pathname = usePathname();
 
   return (
-    <LocaleSwitcherSelect defaultValue={locale} label={t('label')}>
-      {locales.map((cur) => (
-        <option key={cur} value={cur}>
-          {t('locale', {locale: cur})}
-        </option>
-      ))}
-    </LocaleSwitcherSelect>
+    <Link href={pathname} locale={otherLocale}>
+      {t('switchLocale', {locale: otherLocale})}
+    </Link>
   );
 }
